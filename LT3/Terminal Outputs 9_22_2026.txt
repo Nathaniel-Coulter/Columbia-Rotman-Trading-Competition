@@ -1,0 +1,579 @@
+(.venv) PS C:\Users\hocke\Desktop\quant_portfolio_scaffold> python .\columbia\lt3_competition_engine.py --live-class
+
+=== LT3 COMPETITION PREFLIGHT ===
+Case status:      STOPPED | period=1 tick=0
+Trader:           nhc2123
+Positions:        {'CRZY': 0, 'TAME': 0}
+Open orders:      0
+Active tenders:   0
+Risk limits:      net=100000.0 gross=250000.0 (LIMIT-STOCK)
+Fine baseline:    0.0
+CRZY: fee=0.02 maxOrder=25000 apiRate=200.0 execDelayMs=0
+TAME: fee=0.02 maxOrder=10000 apiRate=200.0 execDelayMs=0
+PREFLIGHT: PASS
+
+Connected to LT3 Competition Engine COMP-1.0.
+RUN_ID=20260922T141624Z-a01f6945
+LIVE=True  BASE=http://localhost:9999/v1
+Database:      C:\Users\hocke\Desktop\quant_portfolio_scaffold\columbia\logs\lt3_competition.sqlite
+Tender CSV:    C:\Users\hocke\Desktop\quant_portfolio_scaffold\columbia\logs\lt3_competition_tenders.csv
+Execution CSV: C:\Users\hocke\Desktop\quant_portfolio_scaffold\columbia\logs\lt3_competition_executions.csv
+Order CSV:     C:\Users\hocke\Desktop\quant_portfolio_scaffold\columbia\logs\lt3_competition_orders.csv
+FINAL CORE policy: after-fee edge >= $0.05/sh (3c safety + 2c residual), scored >= $750.
+FINAL MARGINAL policy: $0.04 <= after-fee edge < $0.05/sh, fav full-depth imbalance >= 0.05, same coverage/risk/profit constraints.
+Execution: TENDER_GATED_PIPELINED_MARKET_COMP_1_0; dynamic order-rate pacing at 90% of the advertised case limit (fallback 9.0/sec).
+Tender poll target: every 50 ms. Heavy SQLite/CSV persistence is deferred until after the live hedge burst.
+Research follow-ups: DISABLED (competition default)
+
+*** LIVE CLASS EXECUTION ARMED ***
+Qualifying tenders WILL be accepted. After acceptance, the engine waits for the tender-created inventory to be BOOKED in /securities; only then is the max-size MARKET hedge pipelined. This guard prevents LT3 front-running/speculation fines.
+
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0001 | tick=0 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0001 | TICK  23 | Tender 49 | BUY 67,000 TAME @ 24.63
+Expires: 54
+Book: bid=24.92 ask=24.96 spread=0.0400 depth/x=0.85
+Immediate unwind: SELL 67,000 | VWAP=24.639142 | Worst=24.34
+Raw edge=0.0091/sh | After fees=-0.0109/sh ($-727)
+Decision edge after safety=-0.0409/sh | Scored=$-2,737
+VWAP curve 25/50/75/100%: 24.8081 / 24.7436 / 24.6778 / N/A
+Fav imbalance top5/top10/full: -0.074 / -0.027 / -0.266
+Projected risk: net 67,000/100,000 | gross 67,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 57,141/67,000; post-safety modeled profit $-2,737 < $750; after-fee edge $-0.0109/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 49 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0001 | TICK  84 | Tender 849 | SELL 74,000 CRZY @ 10.61
+Expires: 115
+Book: bid=10.46 ask=10.48 spread=0.0200 depth/x=1.01
+Immediate unwind: BUY 74,000 | VWAP=10.735878 | Worst=11.04
+Raw edge=-0.1259/sh | After fees=-0.1459/sh ($-10,795)
+Decision edge after safety=-0.1759/sh | Scored=$-13,015
+VWAP curve 25/50/75/100%: 10.5806 / 10.6287 / 10.6641 / 10.7359
+Fav imbalance top5/top10/full: -0.351 / -0.344 / -0.355
+Projected risk: net -74,000/100,000 | gross 74,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-13,015 < $750; after-fee edge $-0.1459/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 849 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0001 | TICK 139 | Tender 1649 | SELL 73,000 TAME @ 25.11
+Expires: 169
+Book: bid=25.04 ask=25.12 spread=0.0800 depth/x=0.45
+Immediate unwind: BUY 73,000 | VWAP=25.787695 | Worst=26.29
+Raw edge=-0.6777/sh | After fees=-0.6977/sh ($-50,932)
+Decision edge after safety=-0.7277/sh | Scored=$-53,122
+VWAP curve 25/50/75/100%: 25.5661 / N/A / N/A / N/A
+Fav imbalance top5/top10/full: -0.043 / -0.194 / -0.194
+Projected risk: net -73,000/100,000 | gross 73,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 32,968/73,000; post-safety modeled profit $-53,122 < $750; after-fee edge $-0.6977/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0001 | TICK 200 | Tender 2449 | SELL 75,000 TAME @ 25.25
+Expires: 231
+Book: bid=25.04 ask=25.07 spread=0.0300 depth/x=1.28
+Immediate unwind: BUY 75,000 | VWAP=25.115068 | Worst=25.18
+Raw edge=0.1349/sh | After fees=0.1149/sh ($8,620)
+Decision edge after safety=0.0849/sh | Scored=$6,370
+VWAP curve 25/50/75/100%: 25.0826 / 25.0913 / 25.1000 / 25.1151
+Fav imbalance top5/top10/full: 0.723 / 0.250 / 0.147
+Projected risk: net -75,000/100,000 | gross 75,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.1149/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 2449 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=1024.9ms | booked->first=2.0ms | burst=107.6ms | execError=-0.00223/sh | preFinePnLDelta=$13,500 | fineDelta=$0 | feeModelError=$-0 | rateHits=0
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0001 | TICK 263 | Tender 3249 | BUY 73,000 CRZY @ 11.24
+Expires: 293
+Book: bid=11.45 ask=11.46 spread=0.0100 depth/x=1.73
+Immediate unwind: SELL 73,000 | VWAP=11.359427 | Worst=11.30
+Raw edge=0.1194/sh | After fees=0.0994/sh ($7,258)
+Decision edge after safety=0.0694/sh | Scored=$5,068
+VWAP curve 25/50/75/100%: 11.4201 / 11.4015 / 11.3766 / 11.3594
+Fav imbalance top5/top10/full: 0.342 / 0.364 / 0.557
+Projected risk: net 73,000/100,000 | gross 73,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.0994/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 3249 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=961.5ms | booked->first=2.4ms | burst=58.5ms | execError=-0.05620/sh | preFinePnLDelta=$20,440 | fineDelta=$0 | feeModelError=$-0 | rateHits=0
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0001 | tenders=5 policy_accepts=2 (core=2, marginal=0) policy_declines=3 scored=$11,438 ###
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0002 | tick=0 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0002 | TICK  27 | Tender 49 | BUY 68,000 CRZY @ 9.59
+Expires: 57
+Book: bid=9.80 ask=9.83 spread=0.0300 depth/x=1.06
+Immediate unwind: SELL 68,000 | VWAP=9.707515 | Worst=9.42
+Raw edge=0.1175/sh | After fees=0.0975/sh ($6,631)
+Decision edge after safety=0.0675/sh | Scored=$4,591
+VWAP curve 25/50/75/100%: 9.7850 / 9.7721 / 9.7515 / 9.7075
+Fav imbalance top5/top10/full: -0.200 / -0.138 / -0.144
+Projected risk: net 68,000/100,000 | gross 68,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.0975/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 49 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=968.3ms | booked->first=2.3ms | burst=37.8ms | execError=-0.02716/sh | preFinePnLDelta=$14,960 | fineDelta=$0 | feeModelError=$0 | rateHits=0
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0002 | TICK  87 | Tender 849 | SELL 75,000 TAME @ 24.52
+Expires: 118
+Book: bid=24.34 ask=24.36 spread=0.0200 depth/x=1.18
+Immediate unwind: BUY 75,000 | VWAP=24.652427 | Worst=25.21
+Raw edge=-0.1324/sh | After fees=-0.1524/sh ($-11,432)
+Decision edge after safety=-0.1824/sh | Scored=$-13,682
+VWAP curve 25/50/75/100%: 24.4785 / 24.5247 / 24.5686 / 24.6524
+Fav imbalance top5/top10/full: 0.410 / 0.315 / 0.133
+Projected risk: net -75,000/100,000 | gross 75,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-13,682 < $750; after-fee edge $-0.1524/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 849 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0002 | TICK 148 | Tender 1649 | SELL 74,000 CRZY @ 10.01
+Expires: 178
+Book: bid=9.75 ask=9.78 spread=0.0300 depth/x=0.85
+Immediate unwind: BUY 74,000 | VWAP=10.321471 | Worst=10.78
+Raw edge=-0.3115/sh | After fees=-0.3315/sh ($-24,529)
+Decision edge after safety=-0.3615/sh | Scored=$-26,749
+VWAP curve 25/50/75/100%: 9.9248 / 10.1063 / 10.2631 / N/A
+Fav imbalance top5/top10/full: -0.183 / -0.131 / -0.247
+Projected risk: net -74,000/100,000 | gross 74,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 63,219/74,000; post-safety modeled profit $-26,749 < $750; after-fee edge $-0.3315/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0002 | TICK 197 | Tender 2449 | SELL 72,000 CRZY @ 9.68
+Expires: 227
+Book: bid=9.44 ask=9.46 spread=0.0200 depth/x=1.10
+Immediate unwind: BUY 72,000 | VWAP=9.654031 | Worst=9.90
+Raw edge=0.0260/sh | After fees=0.0060/sh ($430)
+Decision edge after safety=-0.0240/sh | Scored=$-1,730
+VWAP curve 25/50/75/100%: 9.5331 / 9.5779 / 9.6052 / 9.6540
+Fav imbalance top5/top10/full: -0.075 / -0.100 / -0.019
+Projected risk: net -72,000/100,000 | gross 72,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-1,730 < $750; after-fee edge $0.0060/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 2449 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0002 | TICK 258 | Tender 3249 | SELL 67,000 TAME @ 23.61
+Expires: 289
+Book: bid=23.42 ask=23.43 spread=0.0100 depth/x=1.39
+Immediate unwind: BUY 67,000 | VWAP=23.526672 | Worst=23.73
+Raw edge=0.0833/sh | After fees=0.0633/sh ($4,243)
+Decision edge after safety=0.0333/sh | Scored=$2,233
+VWAP curve 25/50/75/100%: 23.4381 / 23.4653 / 23.4900 / 23.5267
+Fav imbalance top5/top10/full: -0.013 / 0.048 / 0.056
+Projected risk: net -67,000/100,000 | gross 67,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.0633/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 3249 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=1009.2ms | booked->first=2.1ms | burst=68.2ms | execError=0.03878/sh | preFinePnLDelta=$11,390 | fineDelta=$0 | feeModelError=$0 | rateHits=0
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0002 | tenders=5 policy_accepts=2 (core=2, marginal=0) policy_declines=3 scored=$6,824 ###
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0003 | tick=1 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0003 | TICK  20 | Tender 49 | BUY 66,000 CRZY @ 9.70
+Expires: 50
+Book: bid=9.96 ask=10.00 spread=0.0400 depth/x=1.45
+Immediate unwind: SELL 66,000 | VWAP=9.850045 | Worst=9.76
+Raw edge=0.1500/sh | After fees=0.1300/sh ($8,583)
+Decision edge after safety=0.1000/sh | Scored=$6,603
+VWAP curve 25/50/75/100%: 9.9265 / 9.8983 / 9.8744 / 9.8500
+Fav imbalance top5/top10/full: 0.049 / 0.027 / 0.010
+Projected risk: net 66,000/100,000 | gross 66,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.1300/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 49 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=977.2ms | booked->first=2.4ms | burst=35.2ms | execError=-0.01321/sh | preFinePnLDelta=$18,480 | fineDelta=$0 | feeModelError=$-0 | rateHits=0
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0003 | TICK  90 | Tender 849 | SELL 68,000 TAME @ 25.03
+Expires: 120
+Book: bid=24.80 ask=24.81 spread=0.0100 depth/x=0.77
+Immediate unwind: BUY 68,000 | VWAP=25.260033 | Worst=25.91
+Raw edge=-0.2300/sh | After fees=-0.2500/sh ($-17,002)
+Decision edge after safety=-0.2800/sh | Scored=$-19,042
+VWAP curve 25/50/75/100%: 24.8309 / 25.0016 / 25.2444 / N/A
+Fav imbalance top5/top10/full: -0.327 / -0.340 / -0.431
+Projected risk: net -68,000/100,000 | gross 68,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 52,227/68,000; post-safety modeled profit $-19,042 < $750; after-fee edge $-0.2500/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 849 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0003 | TICK 137 | Tender 1649 | BUY 74,000 CRZY @ 9.76
+Expires: 168
+Book: bid=9.94 ask=9.96 spread=0.0200 depth/x=1.30
+Immediate unwind: SELL 74,000 | VWAP=9.808615 | Worst=9.70
+Raw edge=0.0486/sh | After fees=0.0286/sh ($2,117)
+Decision edge after safety=-0.0014/sh | Scored=$-103
+VWAP curve 25/50/75/100%: 9.9207 / 9.8783 / 9.8400 / 9.8086
+Fav imbalance top5/top10/full: 0.158 / 0.133 / 0.296
+Projected risk: net 74,000/100,000 | gross 74,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-103 < $750; after-fee edge $0.0286/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0003 | TICK 198 | Tender 2449 | BUY 73,000 CRZY @ 9.81
+Expires: 228
+Book: bid=9.81 ask=9.83 spread=0.0200 depth/x=0.71
+Immediate unwind: SELL 73,000 | VWAP=9.374015 | Worst=8.99
+Raw edge=-0.4360/sh | After fees=-0.4560/sh ($-33,287)
+Decision edge after safety=-0.4860/sh | Scored=$-35,477
+VWAP curve 25/50/75/100%: 9.7316 / 9.5205 / N/A / N/A
+Fav imbalance top5/top10/full: 0.347 / 0.232 / 0.232
+Projected risk: net 73,000/100,000 | gross 73,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 51,625/73,000; post-safety modeled profit $-35,477 < $750; after-fee edge $-0.4560/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 2449 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0003 | TICK 258 | Tender 3249 | BUY 65,000 TAME @ 25.26
+Expires: 288
+Book: bid=25.48 ask=25.52 spread=0.0400 depth/x=1.29
+Immediate unwind: SELL 65,000 | VWAP=25.267338 | Worst=24.95
+Raw edge=0.0073/sh | After fees=-0.0127/sh ($-823)
+Decision edge after safety=-0.0427/sh | Scored=$-2,773
+VWAP curve 25/50/75/100%: 25.4632 / 25.4214 / 25.3613 / 25.2673
+Fav imbalance top5/top10/full: 0.052 / -0.003 / 0.238
+Projected risk: net 65,000/100,000 | gross 65,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-2,773 < $750; after-fee edge $-0.0127/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 3249 declined: {'success': True}
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0003 | tenders=5 policy_accepts=1 (core=1, marginal=0) policy_declines=4 scored=$6,603 ###
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0004 | tick=1 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0004 | TICK  15 | Tender 49 | BUY 70,000 CRZY @ 9.79
+Expires: 46
+Book: bid=10.00 ask=10.05 spread=0.0500 depth/x=1.30
+Immediate unwind: SELL 70,000 | VWAP=9.936514 | Worst=9.82
+Raw edge=0.1465/sh | After fees=0.1265/sh ($8,856)
+Decision edge after safety=0.0965/sh | Scored=$6,756
+VWAP curve 25/50/75/100%: 9.9823 / 9.9698 / 9.9530 / 9.9365
+Fav imbalance top5/top10/full: -0.135 / -0.074 / -0.069
+Projected risk: net 70,000/100,000 | gross 70,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.1265/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 49 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=1021.8ms | booked->first=2.1ms | burst=38.6ms | execError=0.01383/sh | preFinePnLDelta=$13,300 | fineDelta=$0 | feeModelError=$-0 | rateHits=0
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0004 | TICK  86 | Tender 849 | SELL 67,000 TAME @ 25.15
+Expires: 116
+Book: bid=24.88 ask=24.90 spread=0.0200 depth/x=1.81
+Immediate unwind: BUY 67,000 | VWAP=24.988866 | Worst=25.00
+Raw edge=0.1611/sh | After fees=0.1411/sh ($9,456)
+Decision edge after safety=0.1111/sh | Scored=$7,446
+VWAP curve 25/50/75/100%: 24.9555 / 24.9777 / 24.9852 / 24.9889
+Fav imbalance top5/top10/full: -0.051 / 0.229 / 0.186
+Projected risk: net -67,000/100,000 | gross 67,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.1411/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 849 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=1016.3ms | booked->first=1.6ms | burst=63.4ms | execError=-0.01615/sh | preFinePnLDelta=$18,760 | fineDelta=$0 | feeModelError=$0 | rateHits=0
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0004 | TICK 148 | Tender 1649 | BUY 65,000 CRZY @ 9.78
+Expires: 178
+Book: bid=10.00 ask=10.01 spread=0.0100 depth/x=1.61
+Immediate unwind: SELL 65,000 | VWAP=9.829389 | Worst=9.60
+Raw edge=0.0494/sh | After fees=0.0294/sh ($1,910)
+Decision edge after safety=-0.0006/sh | Scored=$-40
+VWAP curve 25/50/75/100%: 10.0000 / 9.9493 / 9.8987 / 9.8294
+Fav imbalance top5/top10/full: 0.256 / 0.087 / 0.074
+Projected risk: net 65,000/100,000 | gross 65,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-40 < $750; after-fee edge $0.0294/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0004 | TICK 201 | Tender 2449 | SELL 71,000 TAME @ 25.05
+Expires: 232
+Book: bid=24.89 ask=24.95 spread=0.0600 depth/x=1.26
+Immediate unwind: BUY 71,000 | VWAP=25.368972 | Worst=25.63
+Raw edge=-0.3190/sh | After fees=-0.3390/sh ($-24,067)
+Decision edge after safety=-0.3690/sh | Scored=$-26,197
+VWAP curve 25/50/75/100%: 25.0551 / 25.1794 / 25.2887 / 25.3690
+Fav imbalance top5/top10/full: -0.111 / -0.066 / -0.018
+Projected risk: net -71,000/100,000 | gross 71,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-26,197 < $750; after-fee edge $-0.3390/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 2449 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0004 | TICK 257 | Tender 3249 | BUY 71,000 CRZY @ 9.10
+Expires: 287
+Book: bid=9.28 ask=9.31 spread=0.0300 depth/x=1.46
+Immediate unwind: SELL 71,000 | VWAP=9.100361 | Worst=9.00
+Raw edge=0.0004/sh | After fees=-0.0196/sh ($-1,394)
+Decision edge after safety=-0.0496/sh | Scored=$-3,524
+VWAP curve 25/50/75/100%: 9.2270 / 9.1721 / 9.1279 / 9.1004
+Fav imbalance top5/top10/full: 0.211 / 0.133 / -0.050
+Projected risk: net 71,000/100,000 | gross 71,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-3,524 < $750; after-fee edge $-0.0196/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 3249 declined: {'success': True}
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0004 | tenders=5 policy_accepts=2 (core=2, marginal=0) policy_declines=3 scored=$14,202 ###
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0005 | tick=0 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0005 | TICK  16 | Tender 49 | BUY 67,000 TAME @ 24.73
+Expires: 46
+Book: bid=24.90 ask=24.93 spread=0.0300 depth/x=1.04
+Immediate unwind: SELL 67,000 | VWAP=24.794567 | Worst=24.44
+Raw edge=0.0646/sh | After fees=0.0446/sh ($2,986)
+Decision edge after safety=0.0146/sh | Scored=$976
+VWAP curve 25/50/75/100%: 24.8750 / 24.8635 / 24.8374 / 24.7946
+Fav imbalance top5/top10/full: 0.024 / 0.042 / -0.123
+Projected risk: net 67,000/100,000 | gross 67,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=True | marginalGate=False
+>>> DECLINE: 4-5c marginal candidate failed full-depth imbalance gate: -0.123 < 0.05
+============================================================================================
+[CLASS LIVE] Tender 49 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0005 | TICK  77 | Tender 849 | BUY 69,000 TAME @ 24.62
+Expires: 107
+Book: bid=24.69 ask=24.75 spread=0.0600 depth/x=0.92
+Immediate unwind: SELL 69,000 | VWAP=24.430110 | Worst=23.77
+Raw edge=-0.1899/sh | After fees=-0.2099/sh ($-14,482)
+Decision edge after safety=-0.2399/sh | Scored=$-16,552
+VWAP curve 25/50/75/100%: 24.6277 / 24.5940 / 24.5359 / N/A
+Fav imbalance top5/top10/full: 0.393 / 0.232 / -0.154
+Projected risk: net 69,000/100,000 | gross 69,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 63,400/69,000; post-safety modeled profit $-16,552 < $750; after-fee edge $-0.2099/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 849 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0005 | TICK 140 | Tender 1649 | BUY 66,000 TAME @ 24.49
+Expires: 171
+Book: bid=24.62 ask=24.69 spread=0.0700 depth/x=0.71
+Immediate unwind: SELL 66,000 | VWAP=24.342277 | Worst=23.77
+Raw edge=-0.1477/sh | After fees=-0.1677/sh ($-11,070)
+Decision edge after safety=-0.1977/sh | Scored=$-13,050
+VWAP curve 25/50/75/100%: 24.5492 / 24.4859 / N/A / N/A
+Fav imbalance top5/top10/full: 0.182 / 0.169 / -0.195
+Projected risk: net 66,000/100,000 | gross 66,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 47,000/66,000; post-safety modeled profit $-13,050 < $750; after-fee edge $-0.1677/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0005 | TICK 208 | Tender 2449 | BUY 70,000 TAME @ 25.35
+Expires: 239
+Book: bid=25.55 ask=25.56 spread=0.0100 depth/x=1.23
+Immediate unwind: SELL 70,000 | VWAP=25.222517 | Worst=24.88
+Raw edge=-0.1275/sh | After fees=-0.1475/sh ($-10,324)
+Decision edge after safety=-0.1775/sh | Scored=$-12,424
+VWAP curve 25/50/75/100%: 25.5313 / 25.4349 / 25.3137 / 25.2225
+Fav imbalance top5/top10/full: 0.073 / 0.073 / 0.330
+Projected risk: net 70,000/100,000 | gross 70,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-12,424 < $750; after-fee edge $-0.1475/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 2449 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0005 | TICK 270 | Tender 3249 | BUY 71,000 TAME @ 25.29
+Expires: 300
+Book: bid=25.02 ask=25.50 spread=0.4800 depth/x=1.17
+Immediate unwind: SELL 71,000 | VWAP=24.877406 | Worst=24.69
+Raw edge=-0.4126/sh | After fees=-0.4326/sh ($-30,714)
+Decision edge after safety=-0.4626/sh | Scored=$-32,844
+VWAP curve 25/50/75/100%: 24.9963 / 24.9590 / 24.9229 / 24.8774
+Fav imbalance top5/top10/full: -0.068 / -0.234 / 0.051
+Projected risk: net 71,000/100,000 | gross 71,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-32,844 < $750; after-fee edge $-0.4326/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 3249 declined: {'success': True}
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0005 | tenders=5 policy_accepts=0 (core=0, marginal=0) policy_declines=5 scored=$0 ###
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0006 | tick=0 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0006 | TICK  21 | Tender 49 | BUY 66,000 TAME @ 24.39
+Expires: 51
+Book: bid=24.68 ask=24.70 spread=0.0200 depth/x=0.52
+Immediate unwind: SELL 66,000 | VWAP=24.436305 | Worst=23.87
+Raw edge=0.0463/sh | After fees=0.0263/sh ($1,736)
+Decision edge after safety=-0.0037/sh | Scored=$-244
+VWAP curve 25/50/75/100%: 24.6371 / 24.4552 / N/A / N/A
+Fav imbalance top5/top10/full: 0.069 / -0.176 / -0.484
+Projected risk: net 66,000/100,000 | gross 66,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 34,100/66,000; post-safety modeled profit $-244 < $750; after-fee edge $0.0263/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 49 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0006 | TICK  88 | Tender 849 | SELL 69,000 CRZY @ 10.25
+Expires: 118
+Book: bid=10.10 ask=10.25 spread=0.1500 depth/x=0.64
+Immediate unwind: BUY 69,000 | VWAP=10.526121 | Worst=10.91
+Raw edge=-0.2761/sh | After fees=-0.2961/sh ($-20,432)
+Decision edge after safety=-0.3261/sh | Scored=$-22,502
+VWAP curve 25/50/75/100%: 10.2786 / 10.4245 / N/A / N/A
+Fav imbalance top5/top10/full: -0.035 / 0.041 / -0.348
+Projected risk: net -69,000/100,000 | gross 69,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 44,089/69,000; post-safety modeled profit $-22,502 < $750; after-fee edge $-0.2961/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 849 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0006 | TICK 149 | Tender 1649 | SELL 70,000 TAME @ 24.41
+Expires: 179
+Book: bid=24.17 ask=24.25 spread=0.0800 depth/x=1.36
+Immediate unwind: BUY 70,000 | VWAP=24.488011 | Worst=24.56
+Raw edge=-0.0780/sh | After fees=-0.0980/sh ($-6,861)
+Decision edge after safety=-0.1280/sh | Scored=$-8,961
+VWAP curve 25/50/75/100%: 24.3536 / 24.4368 / 24.4675 / 24.4880
+Fav imbalance top5/top10/full: -0.095 / 0.067 / 0.407
+Projected risk: net -70,000/100,000 | gross 70,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-8,961 < $750; after-fee edge $-0.0980/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0006 | TICK 198 | Tender 2449 | SELL 73,000 CRZY @ 9.66
+Expires: 228
+Book: bid=9.45 ask=9.52 spread=0.0700 depth/x=1.86
+Immediate unwind: BUY 73,000 | VWAP=9.793493 | Worst=9.89
+Raw edge=-0.1335/sh | After fees=-0.1535/sh ($-11,205)
+Decision edge after safety=-0.1835/sh | Scored=$-13,395
+VWAP curve 25/50/75/100%: 9.6136 / 9.7086 / 9.7613 / 9.7935
+Fav imbalance top5/top10/full: 0.063 / 0.049 / 0.533
+Projected risk: net -73,000/100,000 | gross 73,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-13,395 < $750; after-fee edge $-0.1535/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 2449 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0006 | TICK 262 | Tender 3249 | BUY 72,000 TAME @ 24.39
+Expires: 292
+Book: bid=24.63 ask=24.66 spread=0.0300 depth/x=1.11
+Immediate unwind: SELL 72,000 | VWAP=24.259179 | Worst=24.05
+Raw edge=-0.1308/sh | After fees=-0.1508/sh ($-10,859)
+Decision edge after safety=-0.1808/sh | Scored=$-13,019
+VWAP curve 25/50/75/100%: 24.5111 / 24.4134 / 24.3211 / 24.2592
+Fav imbalance top5/top10/full: -0.194 / -0.198 / -0.130
+Projected risk: net 72,000/100,000 | gross 72,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-13,019 < $750; after-fee edge $-0.1508/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 3249 declined: {'success': True}
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0006 | tenders=5 policy_accepts=0 (core=0, marginal=0) policy_declines=5 scored=$0 ###
+
+### NEW HEAT 20260922T141624Z-a01f6945-H0007 | tick=0 period=1 ###
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0007 | TICK  27 | Tender 49 | BUY 69,000 CRZY @ 9.74
+Expires: 57
+Book: bid=9.96 ask=10.00 spread=0.0400 depth/x=0.78
+Immediate unwind: SELL 69,000 | VWAP=9.708797 | Worst=9.52
+Raw edge=-0.0312/sh | After fees=-0.0512/sh ($-3,533)
+Decision edge after safety=-0.0812/sh | Scored=$-5,603
+VWAP curve 25/50/75/100%: 9.8885 / 9.7941 / 9.7157 / N/A
+Fav imbalance top5/top10/full: -0.320 / -0.185 / -0.315
+Projected risk: net 69,000/100,000 | gross 69,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 53,638/69,000; post-safety modeled profit $-5,603 < $750; after-fee edge $-0.0512/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 49 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0007 | TICK  84 | Tender 849 | SELL 65,000 TAME @ 25.73
+Expires: 115
+Book: bid=25.50 ask=25.51 spread=0.0100 depth/x=0.44
+Immediate unwind: BUY 65,000 | VWAP=25.641625 | Worst=25.97
+Raw edge=0.0884/sh | After fees=0.0684/sh ($4,444)
+Decision edge after safety=0.0384/sh | Scored=$2,494
+VWAP curve 25/50/75/100%: 25.5359 / N/A / N/A / N/A
+Fav imbalance top5/top10/full: -0.201 / -0.284 / -0.330
+Projected risk: net -65,000/100,000 | gross 65,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 28,300/65,000
+============================================================================================
+[CLASS LIVE] Tender 849 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0007 | TICK 146 | Tender 1649 | BUY 68,000 CRZY @ 9.94
+Expires: 177
+Book: bid=10.16 ask=10.27 spread=0.1100 depth/x=0.92
+Immediate unwind: SELL 68,000 | VWAP=9.641888 | Worst=8.69
+Raw edge=-0.2981/sh | After fees=-0.3181/sh ($-21,632)
+Decision edge after safety=-0.3481/sh | Scored=$-23,672
+VWAP curve 25/50/75/100%: 10.0040 / 9.8536 / 9.7625 / N/A
+Fav imbalance top5/top10/full: 0.132 / 0.165 / 0.064
+Projected risk: net 68,000/100,000 | gross 68,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: visible book covers only 62,655/68,000; post-safety modeled profit $-23,672 < $750; after-fee edge $-0.3181/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 1649 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0007 | TICK 208 | Tender 2449 | BUY 70,000 TAME @ 24.73
+Expires: 239
+Book: bid=24.64 ask=24.74 spread=0.1000 depth/x=1.59
+Immediate unwind: SELL 70,000 | VWAP=24.439829 | Worst=24.17
+Raw edge=-0.2902/sh | After fees=-0.3102/sh ($-21,712)
+Decision edge after safety=-0.3402/sh | Scored=$-23,812
+VWAP curve 25/50/75/100%: 24.5531 / 24.5266 / 24.4939 / 24.4398
+Fav imbalance top5/top10/full: 0.160 / 0.202 / 0.092
+Projected risk: net 70,000/100,000 | gross 70,000/250,000
+Policy regime: DECLINE | core=False | marginalCandidate=False | marginalGate=False
+>>> DECLINE: post-safety modeled profit $-23,812 < $750; after-fee edge $-0.3102/sh below 0.04 marginal floor
+============================================================================================
+[CLASS LIVE] Tender 2449 declined: {'success': True}
+
+============================================================================================
+HEAT 20260922T141624Z-a01f6945-H0007 | TICK 264 | Tender 3249 | BUY 67,000 TAME @ 23.90
+Expires: 294
+Book: bid=24.17 ask=24.20 spread=0.0300 depth/x=1.10
+Immediate unwind: SELL 67,000 | VWAP=23.971823 | Worst=23.50
+Raw edge=0.0718/sh | After fees=0.0518/sh ($3,472)
+Decision edge after safety=0.0218/sh | Scored=$1,462
+VWAP curve 25/50/75/100%: 24.1354 / 24.0981 / 24.0586 / 23.9718
+Fav imbalance top5/top10/full: -0.129 / -0.146 / -0.227
+Projected risk: net 67,000/100,000 | gross 67,000/250,000
+Policy regime: CORE_5C | core=True | marginalCandidate=False | marginalGate=False
+>>> ACCEPT: core policy: after-fee edge $0.0518/sh >= $0.05/sh
+============================================================================================
+[CLASS LIVE] Tender 3249 | regime=CORE_5C | flat=True | ordersFilled=True | accept->booked=1045.9ms | booked->first=1.1ms | burst=42.3ms | execError=-0.12777/sh | preFinePnLDelta=$18,760 | fineDelta=$0 | feeModelError=$-0 | rateHits=0
+### HEAT COMPLETE 20260922T141624Z-a01f6945-H0007 | tenders=5 policy_accepts=1 (core=1, marginal=0) policy_declines=4 scored=$1,462 ###
+
+Stopped cleanly.
+(.venv) PS C:\Users\hocke\Desktop\quant_portfolio_scaffold>

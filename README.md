@@ -1,4 +1,4 @@
-'''text
+```text
 C:.
 |   lt3_sqlite (alpha model training).7z
 |   Nathaniel Coulter lt3_postmortem_report.pdf
@@ -39,4 +39,4 @@ C:.
             lt3_tenders_v4_1.csv
             lt3_tenders_v5.csv
             lt3_tenders_v6.csv
-            '''
+```

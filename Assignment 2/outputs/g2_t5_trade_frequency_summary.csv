@@ -1,0 +1,2 @@
+strategy_name,gate_name,target_pts,stop_pts,time_exit_s,total_trades,n_trade_days,n_trade_weeks,avg_trades_per_day,median_trades_per_day,min_trades_per_day,max_trades_per_day,avg_trades_per_week,median_trades_per_week,min_trades_per_week,max_trades_per_week,avg_trade_days_per_week,median_trade_days_per_week
+G2_t5_s8_t600,G2_VOTE2OF3_curv_cancel_spread,5.0,8.0,600,101,46,22,2.1956521739130435,2.0,1,9,4.590909090909091,2.5,1,28,2.090909090909091,1.0

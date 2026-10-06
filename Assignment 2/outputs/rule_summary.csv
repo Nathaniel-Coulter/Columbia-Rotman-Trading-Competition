@@ -1,0 +1,9 @@
+rule_name,n_events,hit_rate,avg_mr_pts
+C1_cancel_rate_ask__cancel_ratio,346,0.9624277456647399,10.91257225433526
+A1_depth_mid_ask__cancel_rate_ask,343,0.9446064139941691,11.420553935860058
+A2_depth_near_ask__cancel_rate_ask,329,0.9452887537993921,11.358662613981762
+B2_realized_vol_1m__depth_mid_ask,313,0.9424920127795527,11.299520766773163
+B1_realized_volatility_30s__depth_mid_ask,312,0.9487179487179487,11.648237179487179
+D2_depth_near_ask__queue_imbalance_std_5s,291,0.9450171821305842,10.869415807560138
+D1_depth_mid_ask__queue_imbalance_std_5s,289,0.9446366782006921,11.021626297577855
+C2_cancel_rate_ask__bid_depth_curvature,281,0.9466192170818505,11.634341637010676

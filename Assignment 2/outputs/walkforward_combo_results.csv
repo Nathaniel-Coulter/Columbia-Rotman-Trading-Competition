@@ -1,0 +1,61 @@
+fold_id,combo_name,logic,rule_names,train_n_events,train_hit_rate,train_avg_mr_pts,val_n_events,val_hit_rate,val_avg_mr_pts,test_n_events,test_hit_rate,test_avg_mr_pts,hit_rate_degradation_test_minus_train,avg_mr_pts_degradation_test_minus_train
+1,VOTE_A2_C2_D1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,2,0.5,3.25,2,1.0,11.125,0,,,,
+1,VOTE_A2_B2_C2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,3,0.6666666666666666,9.416666666666666,3,1.0,8.333333333333334,0,,,,
+1,VOTE_A2_C2_D2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D2_depth_near_ask__queue_imbalance_std_5s,4,0.75,8.6875,2,1.0,11.125,0,,,,
+1,ALL2_A2_C2,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,1,0.0,0.75,2,1.0,11.125,0,,,,
+1,ALL2_C1_C2,ALL,C1_cancel_rate_ask__cancel_ratio | C2_cancel_rate_ask__bid_depth_curvature,1,0.0,0.75,2,1.0,11.125,0,,,,
+1,ALL2_B2_C2,ALL,B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,1,0.0,0.75,2,1.0,11.125,0,,,,
+1,ALL3_A2_C2_D1,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,1,0.0,0.75,1,1.0,18.25,0,,,,
+1,SINGLE_C2,SINGLE,C2_cancel_rate_ask__bid_depth_curvature,1,0.0,0.75,2,1.0,11.125,0,,,,
+1,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask,5,0.8,11.3,3,1.0,8.333333333333334,0,,,,
+1,SINGLE_C1,SINGLE,C1_cancel_rate_ask__cancel_ratio,9,0.8888888888888888,9.333333333333334,4,1.0,10.3125,4,1.0,4.875,0.11111111111111116,-4.458333333333334
+1,SINGLE_B2,SINGLE,B2_realized_vol_1m__depth_mid_ask,7,0.7142857142857143,9.178571428571429,3,1.0,8.333333333333334,0,,,,
+1,UNION_A2_C2,ANY,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,5,0.8,11.3,3,1.0,8.333333333333334,0,,,,
+2,VOTE_A2_C2_D1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,21,0.9523809523809523,6.9523809523809526,1,1.0,7.75,0,,,,
+2,VOTE_A2_B2_C2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,27,0.9629629629629629,7.416666666666667,1,1.0,7.75,0,,,,
+2,VOTE_A2_C2_D2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D2_depth_near_ask__queue_imbalance_std_5s,22,0.9545454545454546,7.465909090909091,1,1.0,7.75,0,,,,
+2,ALL2_A2_C2,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,16,0.9375,7.234375,1,1.0,7.75,0,,,,
+2,ALL2_C1_C2,ALL,C1_cancel_rate_ask__cancel_ratio | C2_cancel_rate_ask__bid_depth_curvature,12,1.0,7.645833333333333,1,1.0,7.75,0,,,,
+2,ALL2_B2_C2,ALL,B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,13,0.9230769230769231,8.423076923076923,1,1.0,7.75,0,,,,
+2,ALL3_A2_C2_D1,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,10,0.9,7.375,1,1.0,7.75,0,,,,
+2,SINGLE_C2,SINGLE,C2_cancel_rate_ask__bid_depth_curvature,19,0.9473684210526315,7.328947368421052,1,1.0,7.75,0,,,,
+2,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask,31,0.967741935483871,7.709677419354839,1,1.0,7.75,0,,,,
+2,SINGLE_C1,SINGLE,C1_cancel_rate_ask__cancel_ratio,23,1.0,7.0978260869565215,3,1.0,8.833333333333334,1,1.0,4.25,0.0,-2.8478260869565215
+2,SINGLE_B2,SINGLE,B2_realized_vol_1m__depth_mid_ask,28,0.9642857142857143,8.928571428571429,1,1.0,7.75,0,,,,
+2,UNION_A2_C2,ANY,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,34,0.9705882352941176,7.720588235294118,1,1.0,7.75,0,,,,
+3,VOTE_A2_C2_D1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,16,1.0,12.21875,18,0.9444444444444444,10.472222222222221,56,1.0,15.839285714285714,0.0,3.6205357142857135
+3,VOTE_A2_B2_C2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,19,0.9473684210526315,10.092105263157896,21,0.9523809523809523,10.369047619047619,56,1.0,15.308035714285714,0.052631578947368474,5.215930451127818
+3,VOTE_A2_C2_D2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D2_depth_near_ask__queue_imbalance_std_5s,20,1.0,11.375,18,0.9444444444444444,10.472222222222221,54,1.0,15.625,0.0,4.25
+3,ALL2_A2_C2,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,5,1.0,13.4,12,0.9166666666666666,10.291666666666666,43,1.0,16.63953488372093,0.0,3.23953488372093
+3,ALL2_C1_C2,ALL,C1_cancel_rate_ask__cancel_ratio | C2_cancel_rate_ask__bid_depth_curvature,5,1.0,11.1,8,1.0,10.8125,37,1.0,17.756756756756758,0.0,6.656756756756758
+3,ALL2_B2_C2,ALL,B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,3,1.0,16.583333333333332,11,0.9090909090909091,10.568181818181818,38,1.0,18.36842105263158,0.0,1.7850877192982466
+3,ALL3_A2_C2_D1,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,2,1.0,21.625,7,0.8571428571428571,11.25,31,1.0,18.266129032258064,0.0,-3.358870967741936
+3,SINGLE_C2,SINGLE,C2_cancel_rate_ask__bid_depth_curvature,10,1.0,10.275,16,0.9375,9.296875,49,1.0,15.86734693877551,0.0,5.59234693877551
+3,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask,30,0.9333333333333333,9.175,21,0.9523809523809523,10.654761904761905,59,1.0,14.94915254237288,0.06666666666666665,5.77415254237288
+3,SINGLE_C1,SINGLE,C1_cancel_rate_ask__cancel_ratio,24,1.0,9.822916666666666,13,1.0,12.557692307692308,51,0.9803921568627451,15.573529411764707,-0.019607843137254943,5.75061274509804
+3,SINGLE_B2,SINGLE,B2_realized_vol_1m__depth_mid_ask,19,0.9473684210526315,10.355263157894736,21,0.9523809523809523,11.166666666666666,60,1.0,14.408333333333333,0.052631578947368474,4.053070175438597
+3,UNION_A2_C2,ANY,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,35,0.9428571428571428,8.885714285714286,25,0.96,9.96,65,1.0,14.523076923076923,0.05714285714285716,5.637362637362637
+4,VOTE_A2_C2_D1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,95,0.9263157894736842,12.942105263157895,3,1.0,4.333333333333333,3,0.6666666666666666,6.916666666666667,-0.2596491228070176,-6.025438596491228
+4,VOTE_A2_B2_C2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,97,0.9278350515463918,13.054123711340207,5,1.0,6.1,2,0.5,2.625,-0.4278350515463918,-10.429123711340207
+4,VOTE_A2_C2_D2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D2_depth_near_ask__queue_imbalance_std_5s,93,0.9247311827956989,12.852150537634408,3,1.0,4.333333333333333,3,0.6666666666666666,6.916666666666667,-0.25806451612903225,-5.935483870967741
+4,ALL2_A2_C2,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,83,0.9156626506024096,13.21987951807229,3,1.0,4.333333333333333,2,0.5,2.625,-0.4156626506024096,-10.59487951807229
+4,ALL2_C1_C2,ALL,C1_cancel_rate_ask__cancel_ratio | C2_cancel_rate_ask__bid_depth_curvature,77,0.922077922077922,14.188311688311689,6,1.0,5.916666666666667,3,0.6666666666666666,3.0833333333333335,-0.2554112554112554,-11.104978354978355
+4,ALL2_B2_C2,ALL,B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,72,0.9166666666666666,12.833333333333334,2,1.0,6.75,0,,,,
+4,ALL3_A2_C2_D1,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,65,0.9230769230769231,13.45,3,1.0,4.333333333333333,1,1.0,4.75,0.07692307692307687,-8.7
+4,SINGLE_C2,SINGLE,C2_cancel_rate_ask__bid_depth_curvature,96,0.9166666666666666,12.815104166666666,8,1.0,5.78125,6,0.8333333333333334,5.083333333333333,-0.08333333333333326,-7.731770833333333
+4,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask,97,0.9278350515463918,12.791237113402062,4,1.0,5.5625,3,0.6666666666666666,6.916666666666667,-0.26116838487972516,-5.874570446735395
+4,SINGLE_C1,SINGLE,C1_cancel_rate_ask__cancel_ratio,87,0.9310344827586207,13.655172413793103,9,1.0,4.75,9,0.8888888888888888,5.972222222222222,-0.04214559386973182,-7.682950191570881
+4,SINGLE_B2,SINGLE,B2_realized_vol_1m__depth_mid_ask,111,0.9279279279279279,11.957207207207206,5,1.0,11.65,4,0.75,6.9375,-0.1779279279279279,-5.019707207207206
+4,UNION_A2_C2,ANY,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,110,0.9272727272727272,12.488636363636363,9,1.0,6.166666666666667,7,0.8571428571428571,6.571428571428571,-0.07012987012987015,-5.917207792207792
+5,VOTE_A2_C2_D1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,43,0.9534883720930233,12.825581395348838,6,1.0,9.875,13,0.9230769230769231,6.0,-0.030411449016100156,-6.825581395348838
+5,VOTE_A2_B2_C2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,49,0.9591836734693877,11.918367346938776,6,1.0,9.875,14,0.9285714285714286,5.678571428571429,-0.030612244897959107,-6.2397959183673475
+5,VOTE_A2_C2_D2,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D2_depth_near_ask__queue_imbalance_std_5s,42,0.9523809523809523,12.267857142857142,6,1.0,9.666666666666666,13,0.9230769230769231,6.0,-0.0293040293040292,-6.267857142857142
+5,ALL2_A2_C2,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,32,0.96875,13.84375,5,1.0,11.25,13,0.9230769230769231,6.0,-0.04567307692307687,-7.84375
+5,ALL2_C1_C2,ALL,C1_cancel_rate_ask__cancel_ratio | C2_cancel_rate_ask__bid_depth_curvature,40,0.975,12.28125,4,1.0,8.75,13,0.9230769230769231,5.634615384615385,-0.05192307692307685,-6.646634615384615
+5,ALL2_B2_C2,ALL,B2_realized_vol_1m__depth_mid_ask | C2_cancel_rate_ask__bid_depth_curvature,24,0.9583333333333334,12.822916666666666,4,1.0,4.25,6,1.0,4.958333333333333,0.04166666666666663,-7.864583333333333
+5,ALL3_A2_C2_D1,ALL,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature | D1_depth_mid_ask__queue_imbalance_std_5s,13,0.9230769230769231,13.326923076923077,1,1.0,1.75,4,1.0,2.6875,0.07692307692307687,-10.639423076923077
+5,SINGLE_C2,SINGLE,C2_cancel_rate_ask__bid_depth_curvature,49,0.9591836734693877,12.311224489795919,9,1.0,7.972222222222222,15,0.9333333333333333,5.883333333333334,-0.02585034013605436,-6.427891156462585
+5,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask,53,0.9245283018867925,11.023584905660377,6,1.0,9.666666666666666,16,0.9375,6.359375,0.01297169811320753,-4.6642099056603765
+5,SINGLE_C1,SINGLE,C1_cancel_rate_ask__cancel_ratio,69,0.9565217391304348,10.003623188405797,14,1.0,6.928571428571429,26,0.9615384615384616,6.615384615384615,0.0050167224080267525,-3.388238573021182
+5,SINGLE_B2,SINGLE,B2_realized_vol_1m__depth_mid_ask,41,0.926829268292683,9.99390243902439,5,0.8,3.4,8,1.0,6.75,0.07317073170731703,-3.2439024390243905
+5,UNION_A2_C2,ANY,A2_depth_near_ask__cancel_rate_ask | C2_cancel_rate_ask__bid_depth_curvature,70,0.9285714285714286,10.635714285714286,10,1.0,7.35,18,0.9444444444444444,6.222222222222222,0.015873015873015817,-4.413492063492064

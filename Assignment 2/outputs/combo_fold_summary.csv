@@ -1,0 +1,26 @@
+n_trades,avg_mr_pts,avg_mae_pts,stop_hit_rate_proxy,hit_rate_1pt,avg_pnl_proxy_tgt_1_stop_2,hit_rate_2pt,avg_pnl_proxy_tgt_2_stop_2,hit_rate_4pt,avg_pnl_proxy_tgt_4_stop_2,fold_id,combo_name,logic,rule_names
+1,2.0,6.25,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,1,VOTE_B1_C1_D1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | D1_cancel_rate_ask__bid_depth_curvature
+1,2.0,6.25,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,1,ALL2_A2_C1,ALL,A2_depth_near_ask__cancel_rate_ask | C1_realized_vol_1m__depth_mid_ask
+1,2.0,6.25,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,1,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask
+1,2.0,6.25,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,1,VOTE4_A2_B1_C1_E1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+1,2.0,6.25,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,1,VOTE_B1_C1_E1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+1,2.25,14.5,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,2,VOTE_B1_C1_D1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | D1_cancel_rate_ask__bid_depth_curvature
+0,,,,,,,,,,2,ALL2_A2_C1,ALL,A2_depth_near_ask__cancel_rate_ask | C1_realized_vol_1m__depth_mid_ask
+2,6.375,5.25,1.0,1.0,1.0,1.0,2.0,0.5,1.0,2,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask
+2,2.375,11.5,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,2,VOTE4_A2_B1_C1_E1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+1,2.25,14.5,1.0,1.0,1.0,1.0,2.0,0.0,-2.0,2,VOTE_B1_C1_E1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+51,17.887254901960784,14.705882352941176,0.9019607843137255,0.9411764705882353,0.8235294117647058,0.9019607843137255,1.607843137254902,0.7843137254901961,2.7058823529411766,3,VOTE_B1_C1_D1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | D1_cancel_rate_ask__bid_depth_curvature
+43,19.77906976744186,15.622093023255815,0.8837209302325582,0.9534883720930233,0.8604651162790697,0.9069767441860465,1.627906976744186,0.7906976744186046,2.744186046511628,3,ALL2_A2_C1,ALL,A2_depth_near_ask__cancel_rate_ask | C1_realized_vol_1m__depth_mid_ask
+60,16.854166666666668,13.6875,0.9,0.9666666666666667,0.9,0.8666666666666667,1.4666666666666666,0.7333333333333333,2.4,3,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask
+64,16.2578125,13.63671875,0.90625,0.953125,0.859375,0.859375,1.4375,0.734375,2.40625,3,VOTE4_A2_B1_C1_E1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+51,17.691176470588236,14.612745098039216,0.8823529411764706,0.9411764705882353,0.8235294117647058,0.9019607843137255,1.607843137254902,0.7843137254901961,2.7058823529411766,3,VOTE_B1_C1_E1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+5,6.65,7.95,0.8,1.0,1.0,0.8,1.2,0.6,1.6,4,VOTE_B1_C1_D1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | D1_cancel_rate_ask__bid_depth_curvature
+2,9.875,9.125,0.5,1.0,1.0,0.5,0.0,0.5,1.0,4,ALL2_A2_C1,ALL,A2_depth_near_ask__cancel_rate_ask | C1_realized_vol_1m__depth_mid_ask
+4,11.9375,8.6875,0.5,0.75,0.25,0.5,0.0,0.5,1.0,4,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask
+6,9.416666666666666,8.625,0.6666666666666666,0.8333333333333334,0.5,0.6666666666666666,0.6666666666666666,0.5,1.0,4,VOTE4_A2_B1_C1_E1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+5,5.75,10.05,0.8,0.8,0.4,0.6,0.4,0.4,0.4,4,VOTE_B1_C1_E1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+7,15.107142857142858,9.892857142857142,0.8571428571428571,1.0,1.0,1.0,2.0,1.0,4.0,5,VOTE_B1_C1_D1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | D1_cancel_rate_ask__bid_depth_curvature
+7,10.25,8.464285714285714,1.0,1.0,1.0,1.0,2.0,1.0,4.0,5,ALL2_A2_C1,ALL,A2_depth_near_ask__cancel_rate_ask | C1_realized_vol_1m__depth_mid_ask
+17,11.191176470588236,7.338235294117647,0.8823529411764706,1.0,1.0,0.9411764705882353,1.7647058823529411,0.8235294117647058,2.9411764705882355,5,SINGLE_A2,SINGLE,A2_depth_near_ask__cancel_rate_ask
+16,11.53125,7.625,0.875,1.0,1.0,0.9375,1.75,0.8125,2.875,5,VOTE4_A2_B1_C1_E1,AT_LEAST_2,A2_depth_near_ask__cancel_rate_ask | B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio
+11,13.840909090909092,8.204545454545455,0.9090909090909091,1.0,1.0,1.0,2.0,1.0,4.0,5,VOTE_B1_C1_E1,AT_LEAST_2,B1_depth_mid_ask__queue_imbalance_std_5s | C1_realized_vol_1m__depth_mid_ask | E1_cancel_rate_ask__cancel_ratio

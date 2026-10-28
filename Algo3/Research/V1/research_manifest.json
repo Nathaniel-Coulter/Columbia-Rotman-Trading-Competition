@@ -1,0 +1,68 @@
+{
+  "version": "ALGO3-RESEARCH-V2.0",
+  "db": "/mnt/data/algo3_8heat/algo3_competition_20261020T092035Z-9d215dfa/algo3_competition.sqlite",
+  "rounds": 8,
+  "tenders": 40,
+  "triggers": 30,
+  "shadow_followups": 270,
+  "model_profit": 335984.9599999999,
+  "tail_10s_25pct_by_cohort": {
+    "all": {
+      "horizon_s": 10.0,
+      "n": 29,
+      "sum_tail25_proxy": -20161.304999999684,
+      "mean_tail25_proxy": -695.2174137930925,
+      "win_frac": 0.3793103448275862,
+      "median_tail25_proxy": -475.1250000000002,
+      "max_loss_proxy": -12187.86000000001
+    },
+    "5-<10c": {
+      "horizon_s": 10.0,
+      "n": 15,
+      "sum_tail25_proxy": 12691.3450000005,
+      "mean_tail25_proxy": 846.0896666666999,
+      "win_frac": 0.7333333333333333,
+      "median_tail25_proxy": 1031.000000000021,
+      "max_loss_proxy": -829.50999999988
+    },
+    ">=10c": {
+      "horizon_s": 10.0,
+      "n": 14,
+      "sum_tail25_proxy": -32852.65000000018,
+      "mean_tail25_proxy": -2346.6178571428704,
+      "win_frac": 0.0,
+      "median_tail25_proxy": -1358.8949999999954,
+      "max_loss_proxy": -12187.86000000001
+    }
+  },
+  "entry_policy_simulations": [
+    {
+      "policy": "instant_5c",
+      "selected": 30,
+      "total_model_profit": 333985.3399999999,
+      "train_model_profit": 139471.02499999985,
+      "test_model_profit": 194514.31500000006
+    },
+    {
+      "policy": "wait_2s_or_8c",
+      "selected": 29,
+      "total_model_profit": 340256.73500000016,
+      "train_model_profit": 138843.9900000001,
+      "test_model_profit": 201412.74500000005
+    },
+    {
+      "policy": "instant_8c",
+      "selected": 25,
+      "total_model_profit": 326449.77500000026,
+      "train_model_profit": 135348.61500000005,
+      "test_model_profit": 191101.1600000002
+    },
+    {
+      "policy": "instant_10c",
+      "selected": 23,
+      "total_model_profit": 325840.0000000005,
+      "train_model_profit": 127041.24500000016,
+      "test_model_profit": 198798.75500000035
+    }
+  ]
+}
